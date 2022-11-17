@@ -1,5 +1,6 @@
 const express = require('express')
-var cors = require('cors')
+const mongoose = require('mongoose')
+const cors = require('cors')
 const productsRoutes = require('./routes/products')
 const app = express()
 
@@ -17,8 +18,6 @@ app.get('/isAlive', (req, res) => {
 mongoose.connect(process.env.MONGODB_URI)
     .then(() => { console.log("Conectado a BD") })
     .catch((err) => { console.error(err) })
-
-
 
 //Iniciamos el servidor, y le decimos que escuche en el puerto 3000
 let port = process.env.PORT || 3000
