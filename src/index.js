@@ -29,5 +29,5 @@ console.log('consola 5')
 //Iniciamos el servidor, y le decimos que escuche en el puerto 3000
 let port = process.env.PORT || 3000
 app.listen(port, () => {
-    console.log('El servidor esta funcionando!')
+    console.log('El servidor esta funcionando!', port)
 })
